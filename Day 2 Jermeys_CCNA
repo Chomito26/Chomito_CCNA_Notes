@@ -30,6 +30,100 @@ Speed           Common Name         IEEE standard           Informal Name       
 1 Gbps          Gigabit Ethernet    802.3ab                 1000BASE-T              100 meters
 10 Gbps         10 Gig Ethernet     802.3an                 10GBASE-T               100 meters
 
+BASE = refers to baseband signaling
+T = twisted pair (more on that soon!)
+
+UTP Cables
+Unshielded
+Twisted
+Pair
+
+Twisted pair - Protects agains EMI (Electromagnetic Interference)
+
+10 BASE-T and 100BASE-T = 2 pairs (4 wires)
+1000BASE-T and 10GBASE-T = 4 pairs (8 wires)
+
+*** UTP Cables (10BASE-T, 100BASE-T)
+
+   Transmit 1                          1  Receive
+      (Tx)  2                          2    (Rx)
+            3                          3
+    PC      4                          4    Switch
+            5                          5
+            6                          6
+            7                          7
+            8                          8
+
+*** UTP Cables (10BASE-T, 100BASE-T) ***
+Device Type             Transmit (Tx) Pins                  Receive (Rx) Pins
+Router                      1 and 2                             3 and 6
+Firewall                    1 and 2                             3 and 6
+PC                          1 and 2                             3 and 6
+Switch                      3 and 6                             1 and 2
+
+Auto MDI-X - automatically change or detect what is needed cables.
+
+*** UTP Cables (1000BASE-T, 10GBASE-T) ***
+- Used all 8 wires.
+1 & 2 = 1 & 2
+3 & 6 = 3 & 6
+4 & 5 = 4 & 5
+7 & 8 = 7 & 8
+
+note: each pair is bidirectional
+
+
+*** Fiber-Optic Connections ***
+SFP Transceiver (Small Form-Factor Pluggable)
+
+4 Parts of fiber-optic cables
+1. The fiberglass core itself
+2. cladding that reflects light
+3. a protective buffer
+4. the outer jacket of the cable
+
+Single-mode and Multimode
+
+Multimode Fiber
+* Core diameter is wider than single-mode fiber.
+* Allows multiple angles (modes) of light waves to enter the fiberglass core.
+* Allows longer cables than UTP, but shorter cables than single-mode fiber.
+* Cheaper than single-mode fiber (due to cheaper LED-based SFP transmitters.)
+
+Single-mode Fiber
+* Core diameter is narrower than multimode fiber.
+* Light enter at a single angle (mode) from a laser-based transmitter.
+* Allows longer cables than both UTP and multimode fiber.
+* More expensive than multimode fiber (due to more expensive laser-based SFP transmitters)
+
+
+*** Fiber-Optic Cable Standards ***
+
+Informal Name                   IEEE Standard                       Speed                        Cable Type                          Maximum Length
+1000BASE-LX                        802.3z                           1 Gbps                      Multimode or                            550 m (MM)
+                                                                                                Single-mode                              5 km (SM)
+10GBASE-SR                         802.3ae                          10 Gbps                     Multimode                               400 m
+10GBASE-LR                         802.3ae                          10 Gbps                     Single-mode                              10 km
+10GBASE-ER                         802.3ae                          10 Gbps                     Single-mode                              30 km
+
+
+*** UTP vs Fiber-Optic Cabling ***
+
+                         UTP                                                                Fiber-Optic
+    *Lower cost than fiber-optic.
+    *Shorter maximum distance than fiber-optic (~100m).
+    *Can be vulnerable to EMI (Electromagnetic Interference).
+    *
+
+
+
+
+
+
+
+
+
+
 
 
 
