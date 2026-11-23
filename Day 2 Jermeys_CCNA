@@ -1,0 +1,38 @@
+November 23, 2026 - Notes
+
+*** Interfaces and Cables ***
+
+Switch has multiple Interfaces
+RJ-45 (Registered Jack)
+
+Ethernet - is a collection of network protocols/standards
+
+Why do we need network protocols/standard?
+
+*** Bits and Bytes ***
+
+Bits is 0 or 1
+
+Bytes is = to 8 Bits
+
+Speed is measured in bits per second (Kbps, Mbps, Gbps, etc.), not bytes per second.
+1 Kilobit (Kb)  = 1,000 bits
+1 megabit (Mb)  = 1,000,000 bits
+1 gigabut (Gb)  = 1,000,000,000 bits
+1 terabit (Tb)  = 1,000,000,000,000 Bits
+
+*** Ethernet standards (copper)***
+Defined in the IEEE 802.3 standard in 1983
+
+Speed           Common Name         IEEE standard           Informal Name           Maximum Length
+10 Mbps         Ethernet            802.3i                  10BASE-T                100 meters
+100 Mbps        Fast Ethernet       802.3u                  100BASE-T               100 meters      
+1 Gbps          Gigabit Ethernet    802.3ab                 1000BASE-T              100 meters
+10 Gbps         10 Gig Ethernet     802.3an                 10GBASE-T               100 meters
+
+
+
+
+
+
+
