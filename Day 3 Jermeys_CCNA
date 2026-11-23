@@ -203,9 +203,9 @@ PC1                                                                             
 
 *** Decapsulation process ***
 
-SRV1                                                                                        << ============  5) Data
-5 Application                                                              4) Decapsulate  ||
-4 Transport                                             ================   ====================>>  L4 header   Data
+SRV1                                            ========================================================>>  5) Data
+5 Application                   4) Decapsulate  ||
+4 Transport                                     <<====  =======================================>>  L4 header   Data
 3 Internet                              3) Decapsulate  ||
 2 Local network                                         <<=====   ================>> L3 header     L4 header   Data <<=============================
 1 Physical                                        2) Decapsulate  ||                                                                              ||    2) Decapsulate
@@ -214,9 +214,14 @@ SRV1                                                                            
                                                       ======================= 0 0 1 1 1 0 1 0 1 1 1 0 0 1 ===============================>>
                                                                                     1) Receive bits
 
+- The receiving device receives the message as a stream of bits at Layer 1.
+- The device examines the information in the Layer 2 header and trailer, and then removes them (decapsulation).
+    * The decapsulation process continues up the stack: Layer 3 removes the L3 header, then Layer 4 removes the L4 header, and then the data is delivered to the Application layer.
+- The application processes the data and, if needed, generates a response that goes back down the stack.
 
 
 
+*** Protocol data units ***
 
     
 
