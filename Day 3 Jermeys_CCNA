@@ -203,14 +203,16 @@ PC1                                                                             
 
 *** Decapsulation process ***
 
-SRV1
-5 Application 
-4 Transport 
-3 Internet
-2 Local network 
-1 Physical 
-
-
+SRV1                                                                                        << ============  5) Data
+5 Application                                                              4) Decapsulate  ||
+4 Transport                                             ================   ====================>>  L4 header   Data
+3 Internet                              3) Decapsulate  ||
+2 Local network                                         <<=====   ================>> L3 header     L4 header   Data <<=============================
+1 Physical                                        2) Decapsulate  ||                                                                              ||    2) Decapsulate
+                                                                  <<===== L2 header  L3 header     L4 header   Data     L2 trailer  <<===== ======>>
+                                                                                                                                         ||
+                                                      ======================= 0 0 1 1 1 0 1 0 1 1 1 0 0 1 ===============================>>
+                                                                                    1) Receive bits
 
 
 
