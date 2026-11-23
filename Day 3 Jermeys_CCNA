@@ -114,14 +114,77 @@ Physical Layer          - Sends bits as electrical, optical or radio signals ove
 - Examples: copper UTP cables, fiber-optic cables, Wi-Fi radios and antenans, network interface cards (NICs).
 
 
+*** Layer 2: The Local Network Layer ***
+- The Local Network layer (Layer 2) provides hop-to-hop delivery of messages on a local network.
+    * A hop is one step along the path between two devices:
+        ** from one router or host, to the next router or host in the path.
+    * Switches don't count: a switch just extends the local network, allowing multiple devices to connect.
+
+- Uses MAC (Media Access Control) addresses to identify interfaces.
+    * PC1 sends the message to the MAC address of R1's G1 interface (NIC).
+    * R1 sends the message to the MAC address of R2's G1 interface (NIC).
+    * R2 sends the message tot he MAC address of SRV1's interface (NIC).
+
+- Protocls at this layer include:
+    * Ethernet (IEEE 802.3)
+    * Wi-Fi (IEEE 802.11)
+
+
+*** Layer 3: The Internet Layer Layer ***
+- The Internet layer (Layer 3) provides end-to-end delivery between host across multiple networks.
+    * Internet = internetwork (between networks)
+
+- Uses IP addresses to identify hosts in the network.
+    * When PC1 sends a message to SRV1, it addresses the message to SRV1's IP address.
+
+- Routers operate mainly at this layer, using the message's destination IP address to forward the message toward its final destination host.
+
+- Protocols at this layer include:
+    * IP (IPv4, IPv6)
+    * ICMP (Internet Control Message Protocol)
 
 
 
-Physical Layer
-Local Network Layer
-Internet Layer
-Transport Layer
-Application Layer
+*** Layer 4: The Transport Layer ***
+- The Transport layer (Layer 4) provides end-to-end communication between application processes.
+    * Also called "process-to-process" or "service-to-service".
+
+- Uses port numbers to identify the processes on each host.
+    * When the web client on PC1 wants to send a request to the web server running on SRV1, it addresses the message to port 80.
+
+- Runs mainly on the communicating hosts (PC1 and SRV1); routers normally operate based on IP (Layer 3), not on Transport-layer information.
+- Protocols at this layer include:
+    * UDP (User Datagram Protocol): simple and efficient
+    * TCP (Transmission Control Protocol): more robust features beyond basic message addressing
+ 
+
+*** Layer 5: The Application Layer ***
+- The Application layer (Layer 5) is where network communications meet applications.
+    * Usually called Layer 7 (more info on that later...)
+
+- Defines how application processes format, send, and interpret data.
+
+- Protocols at this layer define message formats and rules for specific tasks, such as:
+    * Browsing web pages (HTTP/HTTPS)
+    * Transferring files (FTP,TFTP)
+    * Sending/receiving email (SMTP, POP3, IMAP)
+
+- Network infrastructure devices (routers, switches) don't care about Application-layer details.
+    * They just move messages across the network.
+    * Only the communicating hosts interpret the data.
+
+
+
+
+*** Encapsulation and decapsulation ***
+
+
+
+
+
+
+
+
 
     
 
