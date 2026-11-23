@@ -101,18 +101,27 @@ Infrastructure Layer : the roads that carry the cars and trucks. ===============
 
 PC1 <<<===>>> SW1 <<<===>>> R1 <<<===>>> R2 <<<===>>> SW2 <<<===>>> SRV1
 
+*** The TCP/IP Model ***
+Application Layer       - Protocls for communication between application processes; create and interpret the data. (Sample: Web Server and file server)
+Transport Layer         - Provides end-to-end communication between application process using port numbers. (Sample: Port 80 for Web server and Port 21 for file server)
+Internet Layer          - Provides end-to-end communication between hosts across networks using IP addresses and routers. (Sample: Internet IP / Destination server IP address for SRV1 like 10.1.1.1)
+Local Network Layer     - Provides hop-to-hop delivery within a local network using MAC addresses and switches. (Sample: Local network between PC1 to R1 | Local network between R1 and R2 | Local network between R2 and SRV1)
+Physical Layer          - Sends bits as electrical, optical or radio signals over the physical medium.
+
+*** Layer 1: The Physical Layer ***
+- The Physical Layer (Layer 1) sends and receives bits as electrical, optical, or radio signals over the medium.
+- Defines thins likes cables, connectors, signal levels, and link speeds.
+- Examples: copper UTP cables, fiber-optic cables, Wi-Fi radios and antenans, network interface cards (NICs).
 
 
 
 
 
-
-
-
-
-
-
-
+Physical Layer
+Local Network Layer
+Internet Layer
+Transport Layer
+Application Layer
 
     
 
