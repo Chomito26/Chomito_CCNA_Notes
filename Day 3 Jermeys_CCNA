@@ -83,11 +83,7 @@ Link Layer (Ethernet, Wi-Fi)            === Local Network Protocol ===
     Related layers: Travel by ground? -> use a car or truck |                    -  Local Delivery Layer: delivery to the next stop on the path using cars/trucks: post office A, then post office B, then Bob's house.
          Travel by air? -> use an airplane | Travel by water? -> use a ship      -  Infrastructure Layer: the roads that caryy the cars and trucks.
 
-Content Layer
-Recipient Layer
-Address Layer
-Local Delivery Layer
-Infrastructure Layer
+
 
 - Each layer has its own job.
     * Layers work together to deliver the message, but each one focuses on its own task.
@@ -95,6 +91,30 @@ Infrastructure Layer
 - What happens inside one layer doesn't change the job of the other layers.
     * Changing the content of the letter doesn't change the delivery steps.
     * Chaning the delivery path doesn't affect the letter itself.
+
+Content Layer : the text of the letter, what you actually want to say. =================================================================>>>>>>>>> Application Layer
+Recipient Layer : "To: Bob" vs "To: Bob's wife": the intended recipient inside the house. ==============================================>>>>>>>>> Transport Layer
+Address Layer : the intended destination address for the house where the recipient lives. ==============================================>>>>>>>>> Internet Layer
+Local Delivery Layer : delivery to the next stop on the path using cars/trucks: post office A, then post office B, then Bob's house. ===>>>>>>>>> Local Network Layer
+Infrastructure Layer : the roads that carry the cars and trucks. =======================================================================>>>>>>>>> Physical Layer
+
+
+PC1 <<<===>>> SW1 <<<===>>> R1 <<<===>>> R2 <<<===>>> SW2 <<<===>>> SRV1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 
 
