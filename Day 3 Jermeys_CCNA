@@ -178,7 +178,37 @@ Physical Layer          - Sends bits as electrical, optical or radio signals ove
 
 *** Encapsulation and decapsulation ***
 
+*** Encapsulation process ***
 
+PC1                                                                                        << ============  1) Data
+5 Application                                                              2) Encapsulate  ||
+4 Transport                                                                    <<=======   ====>>  L4 header   Data
+3 Internet                                                     3) Encapsulate  ||
+2 Local network                                                   <<=========  ===>> L3 header     L4 header   Data ==================>>
+1 Physical                                        4) Encapsulate  ||                                                                  ||   4) Encapsulate
+                                                      <<<=======  =====>> L2 header  L3 header     L4 header   Data     L2 trailer  <<==
+                                                      ||
+                                                      ======================= 0 0 1 1 1 0 1 0 1 1 1 0 0 1 ===================================>
+                                                                        5) Transmit bits over physical medium (ethernet cable)
+
+
+
+- The Applicartion layer prepares the data to be sent over the network.
+- As the message moves down the stack, each layer encapsulates the data with a header including the information needed for that layer.
+    * Source and destination addresses (port numbers, IP addresses, MAC addresses), etc.
+    * Layer 2 also adds a trailer that the receiving device uses to check for transmission errors.
+- The Physical layer transmits the bits as signlas over the physical medium.
+    * The L2 header is transmitted first, and the L2 trailer is transmitted last.
+
+
+*** Decapsulation process ***
+
+SRV1
+5 Application 
+4 Transport 
+3 Internet
+2 Local network 
+1 Physical 
 
 
 
