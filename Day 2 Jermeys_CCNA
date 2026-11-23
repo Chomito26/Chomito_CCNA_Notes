@@ -109,11 +109,16 @@ Informal Name                   IEEE Standard                       Speed       
 
 *** UTP vs Fiber-Optic Cabling ***
 
-                         UTP                                                                Fiber-Optic
-    *Lower cost than fiber-optic.
-    *Shorter maximum distance than fiber-optic (~100m).
-    *Can be vulnerable to EMI (Electromagnetic Interference).
-    *
+                         UTP                                                                                                                                        Fiber-Optic
+    *Lower cost than fiber-optic.                                                                                           *Higher cost than UTP.
+    *Shorter maximum distance than fiber-optic (~100m).                                                                     *Longer maximum distance than UTP.
+    *Can be vulnerable to EMI (Electromagnetic Interference).                                                               *No vulnerabilities to EMI.
+    *RJ45 ports used with UTP are cheaper than SFP ports.                                                                   *SFP ports are more expensive than RJ45 ports (single-mode is more expensive than multimode).
+    *Emit (leak) a faint signal outside of the cable, which can be copied (=security risk)                                  *Does not emit any signal outside of the cable (=no security risk).
+
+
+    
+
 
 
 
