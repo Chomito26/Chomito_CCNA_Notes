@@ -251,9 +251,68 @@ SRV1                                            ================================
     * Signals sent out of a physical port are received by a physical port on the connected device.
 
 
+*** Separation of layers ***
+
+- Each layer has its own job and provides a specific service to the layers above.
+    * The layers are modular.
+
+- As long as each layer keeps its "contract" with the other layers, we can improve or replace protocols at different layers without redesigning everything.
+- That flexibility is one of the main benefits of a layered model.
+
+PC1 ========================================================== SRV1
+5 TFTP        <============= communicate with ===============> TFTP 5
+4 UDP         <============= communicate with ===============> UDP 4
+3 IP          <============= communicate with ===============> IP 3
+2 Wi-Fi       <============= communicate with ===============> Wi-Fi 2
+1 Wi-Fi (PHY) <============= communicate with ===============> Wi-Fi (PHY) 2
 
 
-    
+
+
+*** The OSI model ***
+
+- TCP/IP development started in the 1970s (ARPANET work, early TCP/IP specs).
+
+- In the late 1970s and 1980s, the International Organization for Standardization (ISO) designed a 7-layer Open Systems Interconnection (OSI) model and a matching protocol suite.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
